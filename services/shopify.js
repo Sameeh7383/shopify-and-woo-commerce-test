@@ -1,9 +1,8 @@
 const axios = require("axios");
+require('dotenv').config()
 
-const baseUrl =
-  "https://hello24-d5.myshopify.com/admin/api/2022-04/graphql.json/";
-const apiKey = "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";
-
+const baseUrl = "https://hello24-d5.myshopify.com/admin/api/2022-04/graphql.json/";
+const apiKey = process.env.shopifyApiKey;
 const getOrders = () => {
   const startCursor = null;
   const perPage = 5;
